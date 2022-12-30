@@ -1,10 +1,17 @@
 import { AbBotao, AbCampoTexto } from "alurabooks-ds-andre"
 import { AbModal } from "ds-alurabooks"
 import { useState } from "react"
+import axios from 'axios'
 import imgCadastro from './cadastro.svg'
 import styles from './ModalCadastroUsuario.module.scss'
 
-const ModalCadastroUsuario = () => {
+interface PropsModalCadastroUsuario {
+  aberta: boolean
+  aoFechar: () => void
+}
+
+
+const ModalCadastroUsuario = ({ aberta, aoFechar }: PropsModalCadastroUsuario) => {
 
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
@@ -14,17 +21,50 @@ const ModalCadastroUsuario = () => {
   const [senha, setSenha] = useState('')
   const [confirmarSenha, setConfirmarSenha] = useState('')
 
+  const aoSubmeterFormulario = (evento: React.FormEvent<HTMLFormElement>) => {
+    evento.preventDefault()
+    const usuario = {
+      nome,
+      email,
+      endereco,
+      complemento,
+      cep,
+      senha
+    }
+
+    axios.post('http://localhost:8000/public/registrar', usuario)
+      .then(() => {
+
+        alert("Usuário foi cadastrado com sucesso!")
+
+        setNome('')
+        setEmail('')
+        setEndereco('')
+        setComplemento('')
+        setCep('')
+        setSenha('')
+        setConfirmarSenha('')
+        aoFechar()
+
+      })
+      .catch(erro => {
+        alert(erro.response.data.message)
+      })
+
+    console.log(usuario)
+  }
+
   return (
     <AbModal
       titulo="Cadastrar"
-      aberta={true}
-      aoFechar={() => console.log('fechar')}
+      aberta={aberta}
+      aoFechar={aoFechar}
     >
       <div className={styles.corpoModalCadastro}>
         <figure>
           <img src={imgCadastro} alt="imagem de cadastro" />
         </figure>
-        <form>
+        <form onSubmit={aoSubmeterFormulario}>
           <AbCampoTexto
             tituloLabel="Nome"
             placeholder="Digite seu nome completo"

@@ -6,7 +6,10 @@
 - Transformamos um layout do Figma numa aplicação funcional :white_check_mark:
 - Deixamos o formulário pronto para se comunicar com a API :white_check_mark:
 ### Aula 2:
-- 
+- Obter um token de autenticação, dada a combinação de usuário e senha :white_check_mark:
+- Persistir o token obtido na session storage :white_check_mark:
+- A diferença entre local e session storage :white_check_mark:
+- Refatorar e encapsular código usando hooks customizados :negative_squared_cross_mark:	(ainda não achei necessário)
 ### Aula 3:
 - 
 ### Aula 4:

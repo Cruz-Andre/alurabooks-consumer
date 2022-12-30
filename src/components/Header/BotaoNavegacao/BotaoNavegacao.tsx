@@ -13,11 +13,13 @@ const BotaoNavegacao = ({ imagemSrc, texto, textoAltSrc, onClick }: BotaoNavegac
             onClick()
         }
     }
-    
-    return (<button className={styles.btnNav} onClick={manipularClick}>
-        <img src={imagemSrc} alt={textoAltSrc} />
-        {texto}
-    </button>)
+
+    return (
+        <button className={styles.btnNav} onClick={manipularClick}>
+            <img src={imagemSrc} alt={textoAltSrc} />
+            {texto}
+        </button>
+    )
 }
 
 export default BotaoNavegacao
