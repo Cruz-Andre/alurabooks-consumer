@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import usuario from '../BotaoNavegacao/usuario.svg'
 import BotaoNavegacao from '../BotaoNavegacao/BotaoNavegacao'
 import styles from './Menus.module.scss'
+import ModalCadastroUsuario from '../../ModalCadastroUsuario/ModalCadastroUsuario'
 
 const Menus = () => {
   return (
@@ -30,7 +31,7 @@ const Menus = () => {
             textoAltSrc="Icone representando um usuário"
             imagemSrc={usuario}
           />
-          {/* <ModalCadastroUsuario /> */}
+          <ModalCadastroUsuario/>
         </li>
       </ul>
     </>

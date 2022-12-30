@@ -1,10 +1,10 @@
 ![React: autenticando usuários](curso.png)
 
 ### Aula 1:
-- Preparamos o projeto base do Alura Books
-- Criamos a modal de cadastro do usuário
-- Transformamos um layout do Figma numa aplicação funcional
-- Deixamos o formulário pronto para se comunicar com a API
+- Preparamos o projeto base do Alura Books :white_check_mark:
+- Criamos a modal de cadastro do usuário :white_check_mark:
+- Transformamos um layout do Figma numa aplicação funcional :white_check_mark:
+- Deixamos o formulário pronto para se comunicar com a API :white_check_mark:
 ### Aula 2:
 - 
 ### Aula 3:
