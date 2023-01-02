@@ -11,7 +11,9 @@
 - A diferença entre local e session storage :white_check_mark:
 - Refatorar e encapsular código usando hooks customizados :negative_squared_cross_mark:	(ainda não achei necessário)
 ### Aula 3:
-- 
+- Implementar rotas aninhadas para a área logada :white_check_mark:
+- Realizar requisições autenticadas, passando o token no cabeçalho :white_check_mark:
+- Excluir pedidos e sincronizar com o estado local :white_check_mark:
 ### Aula 4:
 - 
 ### Aula 5 final:

@@ -27,7 +27,7 @@ const ModalLoginUsuario = ({ aberta, aoFechar, aoEfetuarLogin }: PropsModalLogin
         sessionStorage.setItem('token', resposta.data.access_token)
         setEmail('')
         setSenha('')
-        aoFechar()
+        aoEfetuarLogin()
         console.log(resposta)
 
       })
