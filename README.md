@@ -15,12 +15,15 @@
 - Realizar requisições autenticadas, passando o token no cabeçalho :white_check_mark:
 - Excluir pedidos e sincronizar com o estado local :white_check_mark:
 ### Aula 4:
-- 
+- Criar uma instância do axios e definir alguns comportamentos padrão para ela :white_check_mark:
+- Interceptar requisições :white_check_mark:
+- Interceptar respostas :white_check_mark:
+- Tratar erros específicos e direcionar o fluxo da aplicação :negative_squared_cross_mark:
 ### Aula 5 final:
 - 
 
 ## 🔨 A saber sobre o projeto
-Vamos desenvolver a autenticação do AluraBooks
+Vamos desenvolver a autenticação do AluraBooks.<br>
 Nós vamos criar a rotina de cadastro de novos usuários e a autenticação em si. Além disso, vamos aprender a interceptar requisições com o axios, adicionando ao cabeçalho das requisições um token de segurança.
 Além de muita mão na massa, vamos entender alguns conceitos importantes que estão relacionado ao nosso dia a dia:
 - autenticação

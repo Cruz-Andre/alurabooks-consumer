@@ -1,9 +1,9 @@
 import { AbBotao, AbCampoTexto } from "alurabooks-ds-andre"
 import { AbModal } from "ds-alurabooks"
 import { useState } from "react"
-import axios from 'axios'
 import imgCadastro from './cadastro.svg'
 import styles from './ModalCadastroUsuario.module.scss'
+import http from "../../../../HTTP"
 
 interface PropsModalCadastroUsuario {
   aberta: boolean
@@ -32,7 +32,7 @@ const ModalCadastroUsuario = ({ aberta, aoFechar }: PropsModalCadastroUsuario) =
       senha
     }
 
-    axios.post('http://localhost:8000/public/registrar', usuario)
+    http.post('public/registrar', usuario)
       .then(() => {
 
         alert("Usuário foi cadastrado com sucesso!")

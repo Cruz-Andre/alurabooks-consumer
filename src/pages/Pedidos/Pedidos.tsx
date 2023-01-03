@@ -1,6 +1,6 @@
 import { AbBotao } from "alurabooks-ds-andre"
-import axios from "axios"
 import { useEffect, useState } from "react"
+import http from "../../HTTP"
 import { IPedido } from "../../interfaces/IPedido"
 
 import styles from './Pedidos.module.scss'
@@ -10,31 +10,19 @@ const Pedidos = () => {
   const [pedidos, setPedidos] = useState<IPedido[]>([])
 
   useEffect(() => {
-    const token = sessionStorage.getItem('token')
-    axios.get<IPedido[]>('http://localhost:8000/pedidos', {
-      headers: {
-        'Authorization': `Bearer ${token}`
-      }
-    })
+    http.get<IPedido[]>('pedidos')
       .then(resposta => setPedidos(resposta.data))
       .catch(erro => console.log(erro))
 
   }, [])
 
   const removerPedido = (pedido: IPedido) => {
-    const token = sessionStorage.getItem('token')
-    axios.delete<IPedido[]>(`http://localhost:8000/pedidos/${pedido.id}`, {
-      headers: {
-        'Authorization': `Bearer ${token}`
-      }
-    })
+    http.delete<IPedido[]>(`pedidos/${pedido.id}`)
       .then(() => {
         setPedidos(pedidos.filter(remove => remove.id !== pedido.id))
       })
       .catch(erro => console.log(erro))
-
   }
-
 
   return (
     <section className={styles.pedidos}>

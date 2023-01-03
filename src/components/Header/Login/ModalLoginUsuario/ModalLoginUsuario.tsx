@@ -2,8 +2,8 @@ import { useState } from "react"
 import { AbModal } from "ds-alurabooks"
 import { AbBotao, AbCampoTexto } from "alurabooks-ds-andre"
 import imgLogin from './login.svg'
-import axios from 'axios'
 import styles from './ModalLoginUsuario.module.scss'
+import http from "../../../../HTTP"
 
 interface PropsModalLoginUsuario {
   aberta: boolean
@@ -22,7 +22,7 @@ const ModalLoginUsuario = ({ aberta, aoFechar, aoEfetuarLogin }: PropsModalLogin
       email,
       senha
     }
-    axios.post('http://localhost:8000/public/login', usuario)
+    http.post('public/login', usuario)
       .then(resposta => {
         sessionStorage.setItem('token', resposta.data.access_token)
         setEmail('')
