@@ -20,7 +20,10 @@
 - Interceptar respostas :white_check_mark:
 - Tratar erros específicos e direcionar o fluxo da aplicação :negative_squared_cross_mark:
 ### Aula 5 final:
-- 
+- Lidar com o logout do lado do cliente :white_check_mark:
+- Estratégias de logout :white_check_mark:
+- Segurança com HTTPS :white_check_mark:
+- Json Web Tokens :white_check_mark:
 
 ## 🔨 A saber sobre o projeto
 Vamos desenvolver a autenticação do AluraBooks.<br>
